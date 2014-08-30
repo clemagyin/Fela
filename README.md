@@ -1,0 +1,1 @@
+Ghost theme for the palaverhut website

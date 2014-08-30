@@ -1,0 +1,76 @@
+{{!< default}}
+
+{{> header}}
+
+<main class="main_fela">
+  {{#post}}
+  
+  <article class="article_fela" role="article" itemscope itemtype="http://schema.org/Article">
+    
+    <header class="postheader_fela">
+      <time class="date_fela" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">
+        {{date format='dddd DD MMM YYYY'}}
+      </time>
+      <h1 class="posttitle_fela" itemprop="headline">
+        {{title}}
+      </h1>
+    </header>
+
+    <div class="postcontent_fela" itemprop="articleBody">
+      {{content}}
+    </div>
+    
+    {{#if tags}}
+    <div class="posttags_fela">
+      Tags: {{tags separator=" | "}}
+    </div>
+    {{/if}}
+
+  </article>
+
+  <div class="sharepost_fela">
+    <h4 class="share_fela">Spread the Palaver! &nbsp;</h4>
+    <a class="share_fela icon-twitter" target="_blank" href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}">
+      <span class="hidethis_fela">Twitter</span>
+    </a>
+    <a class="share_fela icon-facebook" target="_blank" href="http://www.facebook.com/sharer.php?u={{url absolute="true"}}">
+      <span class="hidethis_fela">Facebook</span>
+    </a>
+    <a class="share_fela icon-gplus" target="_blank" href="https://plus.google.com/share?url={{url absolute="true"}}">
+      <span class="hidethis_fela">Google+</span>
+    </a>
+  </div>
+
+  {{#if author}}
+  <footer class="postfooter_fela">
+    <address itemscope itemtype="http://schema.org/Person">
+      {{#if author.image}}
+      <div class="authorimage_fela">
+        <img src="{{author.image}}" itemprop="image" />
+      </div>
+      {{/if}}
+      <h4 class="authorname_fela">
+        <span itemprop="author">{{author.name}}</span>
+      </h4>
+      {{#if author.website}}
+        <div class="authorwebsite_fela">
+          <a href="{{author.website}}" itemprop="url">{{author.website}}</a>
+        </div>
+      {{/if}}
+    </address>
+    <div class="authorbio_fela">
+      <p>{{author.bio}}</p>
+    </div>
+  </footer>
+  {{/if}}
+  
+  {{/post}}
+
+  {{#if paginagation}}
+    <div class="pagination_fela">
+      {{pagination}}
+    </div>
+  {{/if}}
+</main>
+
+{{> footer}}
