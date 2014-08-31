@@ -1,7 +1,11 @@
 //Config modules
-@import "../lib/normalize.scss/_normalize.scss";
-
 
 body {
-	background-color: #F0F0AA;
+	//background-color: #F0F0AA;
+}
+
+.wrapper_fela {
+    width:100%;
+    max-width: 40em;
+    margin: 0 auto;
 }

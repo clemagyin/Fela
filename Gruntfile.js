@@ -163,9 +163,19 @@ module.exports = function(grunt) {
         },
         expand: true,
         cwd: '<%= dir.src %><%= dir.sass %>',
-        files: ['**/*.{sass,scss}'],
+        files: [
+          '**/*.{sass,scss}',
+          '<%=dir.src%>/**/*.hbs',
+        ],
         tasks: [
         'dev-release']
+      }
+    },
+
+    cssmin:{
+      options: {
+        keepSpecialComments: 0,
+        banner: '<%= tag.banner %>'
       }
     }
 
