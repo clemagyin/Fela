@@ -33,7 +33,7 @@ module.exports = function(grunt) {
               ' * <%= pkg.name %>\n' +
               ' * <%= pkg.description %>\n' +
               ' * <%= pkg.url %>\n' +
-              ' * @author <%= pkg.author.name %> <%= pkg.author.url %>\n' +
+              ' * @author <%= pkg.author.name %> <%= pkg.author.email %>\n' +
               ' * @version <%= pkg.version %>\n' +
               ' * Copyright <%= pkg.copyright %>. <%= pkg.license %> licensed.\n' +
               ' */\n'
@@ -59,7 +59,7 @@ module.exports = function(grunt) {
           dot : true,
           src : [
             'assets',
-            '[partials',
+            'partials',
             '*.hbs']
         }]
       }
@@ -105,6 +105,17 @@ module.exports = function(grunt) {
       }
     },
 
+    
+    useminPrepare:{
+      options: {
+        dest: '<%=dir.build%>'
+      },
+      html: '<%=dir.src%>/default.hbs'
+    },
+
+    usemin:{
+      html: ['<%= dir.build %>/default.hbs']
+    },
 
     /**
      * Compile Sass/SCSS files
@@ -124,10 +135,41 @@ module.exports = function(grunt) {
           ext: '.css'
         }]
       }
-    } 
+    },
+
+    /*
+     * Concatenate JavaScript files and appends theme banner
+     * Usemin import .js files
+     */
+    concat: {
+      options: {
+        banner: '<%= tag.banner %>',
+        stripBanners: true,
+        nonull: true
+      }
+    },
+
+    uglify: {
+      options: {
+        banner: '<%= tag.banner %>'
+      }
+    },
+
+    watch: {
+      sass: {
+        options: {
+          reload: true,
+          livereload: true
+        },
+        expand: true,
+        cwd: '<%= dir.src %><%= dir.sass %>',
+        files: ['**/*.{sass,scss}'],
+        tasks: [
+        'dev-release']
+      }
+    }
 
   });
-
 
 
   //Load Grunt plugins
@@ -139,10 +181,22 @@ module.exports = function(grunt) {
   grunt.registerTask('build', 'Compile and compress everything to build folder', [
     'clean:build',
     'sass:build',
-    'copy:build']);
+    'copy:build',
+    'useminPrepare',
+    'concat',
+    'cssmin',
+    'uglify',
+    'usemin'
+  ]);
 
-  grunt.registerTask('dev build', 'Compile and compress all files to assets folder', [
-    'clean:build',
-    'sass:build',
-    'copy:build']);
+  grunt.registerTask('dev-release', 'Compile and compress all files to assets folder', [
+    'build',
+    'clean:release',
+    'copy:release',
+    'clean:build'
+  ]);
+
+  grunt.registerTask('ui-dev', 'Watches sass file changes, then compiles .scss to css,', [
+    'watch'
+  ]);
 };
