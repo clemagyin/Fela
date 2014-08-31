@@ -1,0 +1,32 @@
+{
+  "name": "Fela",
+  "version": "1.0.0",
+  "description": "New responsive theme for Palaver Hut website",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/clemagyin/Fela.git"
+  },
+  "keywords": [
+    "palaver",
+    "palaverhut",
+    "ghost",
+    "fela",
+    "theme"
+  ],
+  "author": "Clem Akomea-Agyin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/clemagyin/Fela/issues"
+  },
+  "homepage": "https://github.com/clemagyin/Fela",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-sass": "^0.8.1",
+    "load-grunt-tasks": "^0.6.0"
+  }
+}

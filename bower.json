@@ -1,0 +1,29 @@
+{
+  "name": "Fela",
+  "version": "1.0.0",
+  "homepage": "https://github.com/clemagyin/Fela",
+  "authors": [
+    "Clem Akomea-Agyin <clemagyin@me.com>"
+  ],
+  "description": "New responsive theme for Palaver Hut website",
+  "keywords": [
+    "ghost",
+    "palaverhut",
+    "palaver",
+    "fela",
+    "blog"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/assets/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.scss": "~3.0.1+normalize.3.0.1"
+  }
+}
