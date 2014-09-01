@@ -1,0 +1,12 @@
+body {
+	@include bodyColor();
+	margin: 0;
+	font-family: $default_font;
+	line-height: $golden + 0em;
+	font-weight: 300;
+}
+
+img {
+	border: 0;
+	max-width: 100%;
+}

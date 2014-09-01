@@ -1,3 +1,24 @@
-$default_font: 'Open Sans', Arial, Helvetica, sans-serif;
- 
-$header_font: 'Oxygen', Arial, Helvetica, sans-serif;
+/* 
+Typography 
+*/
+
+$golden: 1.618;
+$readable_width: 36em;
+
+$header_font: 'Open Sans', Arial, Helvetica, sans-serif;
+$default_font: 'Oxygen', Arial, Helvetica, sans-serif;
+
+/* 
+Color Palette
+*/
+$color_01: #F1654C; //burnt orange
+$color_02: #F7CE38; //gold
+$color_03: #27AE60; //palaver green
+$color_04: #00B5B5; //turqoise
+$color_05: #FAFBFB; //greyish white
+
+/* 
+Layout
+ */
+
+$add_padding: 5 * $golden;

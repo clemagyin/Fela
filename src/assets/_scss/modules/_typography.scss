@@ -1,0 +1,97 @@
+/* 
+Mixins 
+*/
+
+@mixin header-font() {
+	font-family: $header_font;
+	line-height: 1.313em;
+}
+
+/* 
+Styles
+ */
+
+a {
+	background: transparent;
+}
+
+a:link, a:visited {
+	@include linkColor();
+}
+
+a:focus {
+
+}
+
+a:active,
+a:hover {
+	@include linkHoverColor();
+	outline: 0;
+}
+
+h1 {
+	@include header-font();
+	font-size: 3em;
+	margin: 0.563em 0;
+}
+
+h2 {
+	@include header-font();
+	font-size: 2.25em;
+	margin: 0.625em 0;
+}
+
+h3 {
+	@include header-font();
+	font-size: 1.5em;
+	margin: 1.313em 0;
+}
+
+h4 {
+	@include header-font();
+	font-size: 1.313em;
+	margin: 1.313em 0;
+}
+
+h5 {
+	@include header-font();
+	font-size: 1.125em;
+	margin: 1.313em 0;
+}
+
+h6 {
+	@include header-font();
+	font-size: 1em;
+	margin: 0.75em 0;
+}
+
+.header_fela {
+	@include headerColor();
+	text-align: center;
+    padding-top: 1.5 * $golden + 0em;
+    padding-bottom: 3 * $golden + 0em;
+    margin-bottom: 0.25em;
+}
+
+.article_fela {
+	@include articleColor();
+	padding: 0 $add_padding + 0em $add_padding + 0em $add_padding + 0em;
+}
+
+
+h1.posttitle_fela {
+	@include postTitleColor();
+}
+
+h1.blogtitle_fela, h1.blogtitle_fela a {
+	font-size: 4.5rem;
+    margin: 0;
+    font-weight: 700;
+	text-decoration: none;
+}
+
+p.blogdescription_fela, p.blogdescription_fela a {
+	font-size: 1.313rem;
+    margin: 0;
+    text-decoration: none;
+}

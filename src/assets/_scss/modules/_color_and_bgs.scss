@@ -1,0 +1,38 @@
+@mixin bodyColor() {
+	background-color: $color_05;
+	background-image: url(../images/greyzz.png);
+	color: black;
+}
+ 
+@mixin linkColor () {
+    color: $color_03;
+}
+ 
+@mixin linkHoverColor () {
+    color: $color_02;
+}
+ 
+@mixin headerColor () {
+    background-color: white;
+}
+ 
+@mixin articleColor () {
+    background: white;
+    a, a:link, a:visited {
+        color: $color_01;
+    }
+    a:hover, a:focus {
+        color: $color_02;   
+    }
+}
+ 
+@mixin postTitleColor () {
+    background-color: $color_04;
+    color: $color_01;
+    a, a:link, a:visited {
+        color: $color_03;
+    }
+    a:hover, a:focus {
+        color: $color_01;   
+    }
+}

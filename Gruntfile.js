@@ -78,8 +78,8 @@ module.exports = function(grunt) {
             src: [
               '*.{ico,png,md,hbs}',
               'partials/**/*',
-              '<%= dir.images %>/*',
-              '<%= dir.fonts %>/**/*'
+              '.<%= dir.images %>/**/*',
+              '.<%= dir.fonts %>/**/*'
             ],
             dest: '<%=dir.build%>'
           },
