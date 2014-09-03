@@ -1,0 +1,8 @@
+/*!
+ * Fela
+ * New responsive theme for Palaver Hut website
+ * 
+ * @author Clem Akomea-Agyin <clemagyin@me.com>
+ * @version 1.0.0
+ * Copyright . MIT licensed.
+ */
