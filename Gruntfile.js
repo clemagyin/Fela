@@ -166,6 +166,7 @@ module.exports = function(grunt) {
         files: [
           '**/*.{sass,scss}',
           '<%=dir.src%>/**/*.hbs',
+          '<%=dir.src%>/*.hbs',
         ],
         tasks: [
         'dev-release']
