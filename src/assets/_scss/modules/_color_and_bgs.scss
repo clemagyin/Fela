@@ -25,6 +25,12 @@
         color: $color_02;   
     }
 }
+
+@mixin colorband () {
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+}
  
 @mixin postTitleColor () {
     background-color: $color_04;

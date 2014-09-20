@@ -1,0 +1,33 @@
+.fela-navbar-header{
+	background-color: white;
+}
+
+.palaver-brand {
+	height: 100%;
+}
+
+.fela-colorband {
+	height: 2px;
+	padding: 0px;
+	margin: 0px;
+
+	.color1{
+		background-color: $color_01;
+		@include colorband();
+	}
+
+	.color2{
+		background-color: $color_02;
+		@include colorband();
+	}
+
+	.color3{
+		background-color: $color_03;
+		@include colorband();
+	}
+
+	.color4{
+		background-color: $color_04;
+		@include colorband();
+	}	
+}
