@@ -1,5 +1,12 @@
 .fela-navbar-header{
 	background-color: white;
+	position: relative;
+	@include box-shadow(0px, 0px, 5px, rgba(0,0,0,.15) );
+	width: 100%;
+}
+
+.fela-navbar-wrapper {
+	max-width: $readable_width + 2* $add_padding;
 }
 
 .palaver-brand {
